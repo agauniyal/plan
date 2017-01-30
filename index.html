@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      <meta content="Plan - Another Todo app" name="description">
+      <meta content="agauniyal" name="author">
+
+      <title>Plan - Another Todo app</title>
+
+      <link rel="stylesheet" href="css/style.css">
+   </head>
+
+   <body>
+
+      <!-- App template -->
+      <div id="app">
+         <h1>✌️ Another Todo List ✌️</h1>
+         <ul>
+            <li v-for="(todo, index) in todos">→
+               <input type="checkbox" v-model="todo.done">
+               <span v-on:click.ctrl="remove(index)" v-bind:class="{done: todo.done}">
+                  {{todo.text}}
+               </span>
+            </li>
+         </ul>
+
+         <input type="text" @keypress.enter="add()" v-model="newTodo" placeholder="Write Something..." autofocus>
+      </div>
+
+      <!-- App scripts -->
+      <script src="https://unpkg.com/vue@2.1.10/dist/vue.min.js"></script>
+      <script type="text/javascript" src="js/script.js"></script>
+   </body>
+
+</html>

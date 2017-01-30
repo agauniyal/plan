@@ -1,0 +1,51 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+*:focus {
+  outline: none;
+}
+
+#app {
+  width: 700px;
+  margin: 5% auto;
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+  font-size: 2.6em;
+}
+
+ul {
+  list-style: none;
+  font-size: 1.3em;
+  color: #111;
+}
+
+li {
+  margin-bottom: 2px;
+}
+
+span {
+  color: #88A825;
+}
+
+input[type="text"] {
+  width: 80%;
+  border: 0;
+  padding: 5px 10px;
+  font-size: 1.5em;
+}
+
+.done {
+  text-decoration: line-through;
+  opacity: 0.5;
+  color: #CF4A30;
+}
